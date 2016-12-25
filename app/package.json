@@ -1,0 +1,19 @@
+{
+  "name": "Sparkling",
+  "version": "1.0.0",
+  "description": "The repository of GUI Homebrew Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/sauber92/Sparkling.git",
+  "keywords": [
+    "Electron",
+    "Homebrew"
+  ],
+  "author": "sauber92",
+  "license": "",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
