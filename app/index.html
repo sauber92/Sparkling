@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sparkling</title>
+    <script src="renderer.js"></script>
+  </head>
+  <body>
+    <h1>Sparkling</h1>
+
+    <div>
+      <p>What do you wan?</p>
+    </div>
+
+    <div>
+      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4">login</a>
+    </div>
+
+    <div>
+        <button onclick="brewCommand('update')">brew update</button>
+        <button onclick="brewCommand('list')">brew list</button>
+    </div>
+
+    <div>
+        <input type="text" id="formula"></input>
+        <input type="submit" onclick="brewInput('install', document.getElementById('formula').value)"></input>
+    </div>
+
+    <div>
+        <p id="print-log"></p>
+    </div>
+  </body>
+</html>
