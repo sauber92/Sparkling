@@ -37,7 +37,8 @@ function brewInput(command, formula) {
 
     brew.stderr.on('data', (data) => {
         console.log(`stderr: ${data}`);
-        alert.write("ERROR");
+        alert("Err");
+        logger.innerHTML += `${data}`;
     });
 
     brew.on('close', (code) => {
