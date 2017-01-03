@@ -7,6 +7,12 @@ html {
 
 a {
     text-decoration: none;
+    color: #000000;
+    font-size: 17px;
+}
+
+a:hover {
+  color: #2571f2;
 }
 
 button {
@@ -21,6 +27,10 @@ button {
     font-size: 14px;
     width: 162px;
     margin-top: 17px;
+}
+
+.pages {
+  text-align: center;
 }
 
 .menu {
@@ -96,6 +106,10 @@ button {
     background-color: #898989;
 }
 
+#list {
+  padding-top: 15px;
+}
+
 #navigation-list {
     position: fixed;
     margin-top: 8px;
@@ -155,20 +169,46 @@ button {
 }
 
 #submit-btn {
-  position: relative;
-  text-align: center;
-  margin-top: 30px;
-  width: 120px;
-  background-color: #009e76;
-  color: #000000;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    width: 120px;
+    background-color: #009e76;
+    color: #000000;
 }
 
 #cancle-btn {
-  position: relative;
-  text-align: center;
-  margin-top: 30px;
-  margin-left: 10px;
-  width: 120px;
-  background-color: #fb4748;
-  color: #000000;
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 120px;
+    background-color: #fb4748;
+    color: #000000;
+}
+
+#intro-img {
+  width: 400px;
+  height: auto;
+  margin-top: 20px;
+}
+
+#architecture-img {
+  width: 450px;
+  height: auto;
+  margin-top: 20px;
+}
+
+h3 {
+  margin-top: -5px;
+}
+
+#first-h3 {
+  margin-top: 20px;
+}
+
+#future-line {
+  margin-top: -5px;
+  border-style: solid;
+  border-width: 0 0 0.5px 0;
 }

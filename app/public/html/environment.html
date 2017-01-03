@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sparkling</title>
+
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../public/js/renderer.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // hide the menu when the page load
+            $("#navigation-list").hide();
+            // when .menuBtn is clicked, do this
+            $(".menuBtn").click(function() {
+                // open the menu with slide effect
+                $("#navigation-list").slideToggle(300);
+            });
+        });
+    </script>
+  </head>
+
+  <div class="menu">
+      <span class="menuBtn"><img id="menu-img" src="../../src/menu-btn.svg" alt="Menu icon"></span>
+      <p id="menu-txt">Sparkling</p>
+      <nav id="navigation-list">
+          <div class="logoField">
+              <input id="logo" type="image" src="../../src/logo.png"></input>
+              <hr />
+          </div>
+          <ol>
+              <li id="list"><a href="../../public/html/introduce.html">What is the Sparkling?</a></li>
+              <li id="list"><a href="../../public/html/environment.html">Development environment</a></li>
+              <li id="list"><a href="../../public/html/future.html">Future additions</a></li>
+          </ol>
+      </nav>
+  </div>
+
+  <body class="pages">
+    <input id="architecture-img" type=image src="../../src/architecture.png"></input>
+    <p></p>
+    <button onclick="location.href='../../index.html'">go to home</button>
+  </body>
+</html>
