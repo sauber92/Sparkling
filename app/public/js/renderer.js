@@ -1,22 +1,3 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
-
-// const spawn = require('child_process').spawn;
-// const brew = spawn('brew', ['--help']);
-
-// brew.stdout.on('data', (data) => {
-//   console.log(`stdout: ${data}`);
-// });
-//
-// brew.stderr.on('data', (data) => {
-//   console.log(`stderr: ${data}`);
-// });
-//
-// brew.on('close', (code) => {
-//   console.log(`child process exited with code ${code}`);
-// });
-
 function brewCommand(command) {
     console.log('start brewCommand');
 

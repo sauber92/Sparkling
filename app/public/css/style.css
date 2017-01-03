@@ -1,0 +1,174 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #2571f2;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    width: 162px;
+    margin-top: 17px;
+}
+
+.menu {
+    background-color: #2571f2;
+    /*background-color: #fc8e0f;*/
+    height: 120px;
+    margin-top: -1%;
+    margin-left: -1%;
+    margin-right: -1%;
+    text-align: left;
+}
+
+.contents {
+    position: static;
+    float: left;
+    width: 70%;
+    height: 100%;
+    margin-left: -1%;
+    background-color: #e8e8e8;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contentsObj {
+    position: static;
+    float: left;
+}
+
+.logview {
+    overflow: scroll;
+    margin-top: 20px;
+    float: right;
+    width: 32%;
+    height: 410px;
+    margin-top: 0%;
+    margin-left: -1%;
+    margin-right: -1%;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.searchValueInsert {
+    z-index: 998;
+    position: fixed;
+    top: 220px;
+    left: 25px;
+    width: 500px;
+    height: 220px;
+    background-color: #898989;
+}
+
+.installValueInsert {
+    z-index: 998;
+    position: fixed;
+    top: 220px;
+    left: 25px;
+    width: 500px;
+    height: 220px;
+    background-color: #898989;
+}
+
+.uninstallValueInsert {
+    z-index: 998;
+    position: fixed;
+    top: 220px;
+    left: 25px;
+    width: 500px;
+    height: 220px;
+    background-color: #898989;
+}
+
+#navigation-list {
+    position: fixed;
+    margin-top: 8px;
+    width: 100%;
+    height: 500px;
+    background-color: #ffffff;
+}
+
+#menu-img {
+    width: 25px;
+    height: auto;
+    position: static;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#menu-txt {
+    margin-left: 20px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+}
+
+#login-btn {
+    height: 70px;
+}
+
+#brew-btn {
+    width: 340px;
+}
+
+#search-btn {
+    width: 340px;
+    background-color: #009e76;
+}
+
+#uninstall-btn {
+    background-color: #fb4748;
+    margin-left: 10px;
+}
+
+#formula {
+    z-index: 999;
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    padding: 12px 20px;
+    width: 250px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+#submit-btn {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  width: 120px;
+  background-color: #009e76;
+  color: #000000;
+}
+
+#cancle-btn {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 120px;
+  background-color: #fb4748;
+  color: #000000;
+}

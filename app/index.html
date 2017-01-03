@@ -1,33 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
+
+<head>
     <title>Sparkling</title>
-    <script src="renderer.js"></script>
-  </head>
-  <body>
-    <h1>Sparkling</h1>
 
-    <div>
-      <p>What do you wan?</p>
+    <meta charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="public/js/renderer.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // hide the menu when the page load
+            $("#navigation-list").hide();
+            $(".searchValueInsert").hide();
+            $(".installValueInsert").hide();
+            $(".uninstallValueInsert").hide();
+            // when .menuBtn is clicked, do this
+            $(".menuBtn").click(function() {
+                // open the menu with slide effect
+                $("#navigation-list").slideToggle(300);
+            });
+            $("#search-btn").click(function() {
+                $(".searchValueInsert").slideToggle(300);
+            });
+            $("#install-btn").click(function() {
+                $(".installValueInsert").slideToggle(300);
+            });
+            $("#uninstall-btn").click(function() {
+                $(".uninstallValueInsert").slideToggle(300);
+            });
+        });
+    </script>
+</head>
+
+<div class="menu">
+    <span class="menuBtn"><img id="menu-img" src="src/menu-btn.svg" alt="Menu icon"></span>
+    <p id="menu-txt">Sparkling</p>
+    <nav id="navigation-list">
+        <div class="logoField">
+            <input id="logo" type="image" src="src/logo.png"></input>
+            <hr />
+        </div>
+        <ul>
+            <li><a href="#item1">What is the Sparkling?</a></li>
+            <li><a href="#item2">Development environment</a></li>
+            <li><a href="#item3">Future additions</a></li>
+        </ul>
+    </nav>
+</div>
+
+<body>
+    <div class="contents">
+        <div clas="login">
+            <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4"><img id="login-btn" src="src/login-btn.png"></img>
+            </a>
+            </input>
+        </div>
+
+        <div>
+            <button id="brew-btn" onclick="brewCommand('list')">brew list</button>
+        </div>
+        <div>
+            <button id="brew-btn" onclick="brewCommand('update')">brew update</button>
+        </div>
+        <div>
+            <button id="brew-btn" onclick="brewCommand('upgrade')">brew upgrade</button>
+        </div>
+
+        <div>
+            <button id="search-btn">brew search</button>
+        </div>
+
+        <div>
+            <button id="install-btn">brew install</button>
+            <button id="uninstall-btn">brew uninstall</button>
+        </div>
+
+        <div class="searchValueInsert">
+          <div>
+            <input type="text" id="formula"></input>
+          </div>
+          <div>
+            <button id="submit-btn" onclick="brewInput('search', document.getElementById('formula').value)">search</button>
+            <button id="cancle-btn" onclick="$('.searchValueInsert').slideToggle(300)">cancle</button>
+          </div>
+        </div>
+        <div class="installValueInsert">
+          <div>
+            <input type="text" id="formula"></input>
+          </div>
+          <div>
+            <button id="submit-btn" onclick="brewInput('install', document.getElementById('formula').value)">install</button>
+            <button id="cancle-btn" onclick="$('.installValueInsert').slideToggle(300)">cancle</button>
+          </div>
+        </div>
+        <div class="uninstallValueInsert">
+          <div>
+            <input type="text" id="formula"></input>
+          </div>
+          <div>
+            <button id="submit-btn" onclick="brewInput('uninstall', document.getElementById('formula').value)">uninstall</button>
+            <button id="cancle-btn" onclick="$('.uninstallValueInsert').slideToggle(300)">cancle</button>
+          </div>
+        </div>
     </div>
 
-    <div>
-      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4">login</a>
-    </div>
-
-    <div>
-        <button onclick="brewCommand('update')">brew update</button>
-        <button onclick="brewCommand('list')">brew list</button>
-    </div>
-
-    <div>
-        <input type="text" id="formula"></input>
-        <input type="submit" onclick="brewInput('install', document.getElementById('formula').value)"></input>
-    </div>
-
-    <div>
+    <div class="logview">
+        <h4 style="text-decoration: underline">console log</h4>
         <p id="print-log"></p>
     </div>
-  </body>
+
+</body>
+
 </html>
