@@ -35,7 +35,12 @@ npm start
 2. Connect Github OAuth login  
 3. Save and deploy user preferences  
 4. Edit UI/UX  
-5. Make another version like Sparkling-npm, Sparkling-yum
+5. Make another version like Sparkling-npm, Sparkling-yum  
+
+# Open source list
+
+* jQuery  
+* electron
 
 # License  
 
