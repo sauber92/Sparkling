@@ -5,4 +5,7 @@ package com.sparkling.web.user.service;
  */
 public interface LoginService {
 
+
+    public String loginService(String code);
+
 }
