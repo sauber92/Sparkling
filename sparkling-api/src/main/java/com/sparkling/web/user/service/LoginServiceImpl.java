@@ -104,11 +104,15 @@ public class LoginServiceImpl implements LoginService {
 
 
         }catch (Exception e){
-            e.printStackTrace();
+
+            JSONObject returnErrorResult = new JSONObject();
+
+            returnErrorResult.put("error","-1");
+
             // 예외처리 시
             // return org.json.JSONException: JSONObject["access_token"] not found.
 
-            return e.toString();
+            return returnErrorResult.toString();
         }
 
 
