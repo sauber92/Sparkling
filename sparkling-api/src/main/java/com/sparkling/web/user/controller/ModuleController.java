@@ -27,4 +27,16 @@ public class ModuleController {
     }
 
 
+    @RequestMapping(value="/select", method= RequestMethod.GET)
+    public String selectModuleList(@RequestParam String id) {
+
+
+        String result = moduleService.selectModuleList(id);
+
+
+        return result.toString();
+
+    }
+
+
 }

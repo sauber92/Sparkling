@@ -10,6 +10,8 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by gain on 2017. 1. 4..
  */
@@ -48,5 +50,18 @@ public class ModuleServiceImpl implements ModuleService {
 
             return resultCode.toString();
         }
+    }
+
+    @Override
+    public String selectModuleList(String id) {
+
+
+        Query query = new Query();
+        query.addCriteria(Criteria.where("id").is(id));
+
+        Module module = mongoTemplate.findOne(query,Module.class);
+
+
+        return module.getModule().toString();
     }
 }
