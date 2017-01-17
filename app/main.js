@@ -7,6 +7,40 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
+// 첫 시작시 로그아웃 상태로 만들기!
+function init() {
+  location.href("https://api.github.com/authorizations/1");
+}
+init();
+
+// 깃헙 확인
+var oauthData;
+
+    const {appNet} = require('electron')
+    app.on('ready', () => {
+      const {net} = require('electron')
+      const request = net.request('https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4')
+      request.on('response', (response) => {
+        console.log(`response': ${response.statusCode}`)
+      //console.log(`HEADERS: ${JSON.stringify(response.headers)}`)
+
+      response.on('data', (chunk) => {
+        oauthData = chunk;
+
+
+
+        //console.log(`BODY: ${chunk}`)
+        })
+        response.on('end', () => {
+          console.log('No more data in response.')
+        })
+      })
+      request.end()
+    })
+// electron net end
+
+
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow

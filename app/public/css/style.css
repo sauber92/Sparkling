@@ -35,7 +35,6 @@ button {
 
 .menu {
     background-color: #2571f2;
-    /*background-color: #fc8e0f;*/
     height: 120px;
     margin-top: -1%;
     margin-left: -1%;
@@ -130,6 +129,15 @@ button {
     margin-left: 20px;
     color: #ffffff;
     font-size: 20px;
+}
+
+#login {
+    color: #ffffff;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    z-index: 10;
+    text-align: right;
 }
 
 #logo {
