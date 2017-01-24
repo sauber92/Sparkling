@@ -43,13 +43,13 @@
     <div id="login">Hello,<br/><strong class="login-id">stranger</strong></div>
     <nav id="navigation-list">
         <div class="logoField">
-            <input id="logo" type="image" src="src/logo.png"></input>
+            <input id="logo" type="image" src="src/logo.png"/>
             <hr />
         </div>
         <ol>
-            <li id="list"><a href="public/html/introduce.html">What is the Sparkling?</a></li>
-            <li id="list"><a href="public/html/environment.html">Development environment</a></li>
-            <li id="list"><a href="public/html/future.html">Future additions</a></li>
+            <li class="list"><a href="public/html/introduce.html">What is the Sparkling?</a></li>
+            <li class="list"><a href="public/html/environment.html">Development environment</a></li>
+            <li class="list"><a href="public/html/future.html">Future additions</a></li>
         </ol>
     </nav>
 </div>
@@ -57,55 +57,47 @@
 <body>
     <div class="contents">
         <div clas="login">
-            <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4"><img id="login-btn" src="src/login-btn.png"></img>
+            <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4">
+              <img id="login-btn" src="src/login-btn.png"/>
             </a>
             </input>
         </div>
 
-        <div>
-            <button id="brew-btn" onclick="brewCommand('list')">brew list</button>
-        </div>
-        <div>
-            <button id="brew-btn" onclick="brewCommand('update')">brew update</button>
-        </div>
-        <div>
-            <button id="brew-btn" onclick="brewCommand('upgrade')">brew upgrade</button>
-        </div>
+      <div>
+        <button id="brew-btn" onclick="brewCommand('list')">brew list</button>
+        <button id="brew-btn" onclick="brewCommand('update')">brew update</button>
+        <button id="brew-btn" onclick="brewCommand('upgrade')">brew upgrade</button>
+        <button id="search-btn">brew search</button>
+        <div class="clearFix"></div>
+        <button id="install-btn">brew install</button>
+        <button id="uninstall-btn">brew uninstall</button>
+      </div>
 
-        <div>
-            <button id="search-btn">brew search</button>
-        </div>
-
-        <div>
-            <button id="install-btn">brew install</button>
-            <button id="uninstall-btn">brew uninstall</button>
-        </div>
-
-        <div class="searchValueInsert">
+      <div class="searchValueInsert">
           <div>
-            <input type="text" id="formula"></input>
+            <input type="text" id="formula"/>
           </div>
           <div>
-            <button id="submit-btn" onclick="brewInput('search', document.getElementById('formula').value)">search</button>
-            <button id="cancle-btn" onclick="$('.searchValueInsert').slideToggle(300)">cancle</button>
+            <button class="submit-btn" onclick="brewInput('search', document.getElementById('formula').value)">search</button>
+            <button class="cancel-btn" onclick="$('.searchValueInsert').slideToggle(300)">cancle</button>
           </div>
         </div>
         <div class="installValueInsert">
           <div>
-            <input type="text" id="formula"></input>
+            <input type="text" id="formula"/>
           </div>
           <div>
-            <button id="submit-btn" onclick="brewInput('install', document.getElementById('formula').value)">install</button>
-            <button id="cancle-btn" onclick="$('.installValueInsert').slideToggle(300)">cancle</button>
+            <button class="submit-btn" onclick="brewInput('install', document.getElementById('formula').value)">install</button>
+            <button class="cancel-btn" onclick="$('.installValueInsert').slideToggle(300)">cancle</button>
           </div>
         </div>
         <div class="uninstallValueInsert">
           <div>
-            <input type="text" id="formula"></input>
+            <input type="text" id="formula"/>
           </div>
           <div>
-            <button id="submit-btn" onclick="brewInput('uninstall', document.getElementById('formula').value)">uninstall</button>
-            <button id="cancle-btn" onclick="$('.uninstallValueInsert').slideToggle(300)">cancle</button>
+            <button class="submit-btn" onclick="brewInput('uninstall', document.getElementById('formula').value)">uninstall</button>
+            <button class="cancel-btn" onclick="$('.uninstallValueInsert').slideToggle(300)">cancle</button>
           </div>
         </div>
     </div>
