@@ -106,7 +106,7 @@ button {
     background-color: #898989;
 }
 
-#list {
+.list {
   padding-top: 15px;
 }
 
@@ -142,7 +142,7 @@ button {
     height: 70px;
 }
 
-#brew-btn {
+.brew-btn {
     width: 340px;
 }
 
@@ -156,7 +156,7 @@ button {
     margin-left: 10px;
 }
 
-#formula {
+.formula {
     z-index: 999;
     position: relative;
     text-align: center;
@@ -168,7 +168,7 @@ button {
     border-radius: 4px;
 }
 
-#submit-btn {
+.submit-btn {
     position: relative;
     text-align: center;
     margin-top: 30px;
@@ -177,7 +177,7 @@ button {
     color: #000000;
 }
 
-#cancle-btn {
+.cancel-btn {
     position: relative;
     text-align: center;
     margin-top: 30px;
