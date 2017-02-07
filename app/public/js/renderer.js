@@ -44,24 +44,4 @@ function brewInput(command, formula) {
     brew.on('close', (code) => {
         console.log(`child process exited with code ${code}`);
     });
-<<<<<<< HEAD
 }
-
-$.ajax({
-  type: 'GET',
-  url: 'https://github.com/login/oauth/authorize?scope=skrth00&client_id=7d7882ef5faa8cea3fc4',
-  data: { get_param: 'value' },
-  // async: false,
-  dataType: 'json',
-  success: function (data) {
-    // if(data != null) {
-      console.log(data.login);
-      $('.login-id').empty();
-    // }
-  }
-});
-
-//https://sparklinginjlj.herokuapp.com/login/login?code=b6614a2a609115305dc3
-=======
-}
->>>>>>> develop
