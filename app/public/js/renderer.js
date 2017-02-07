@@ -44,6 +44,7 @@ function brewInput(command, formula) {
     brew.on('close', (code) => {
         console.log(`child process exited with code ${code}`);
     });
+<<<<<<< HEAD
 }
 
 $.ajax({
@@ -61,3 +62,6 @@ $.ajax({
 });
 
 //https://sparklinginjlj.herokuapp.com/login/login?code=b6614a2a609115305dc3
+=======
+}
+>>>>>>> develop
