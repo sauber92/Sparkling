@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Sparkling, Homebrew GUI Application">
     <meta name="keywords" content="Sparkling, Homebrew, electron">
-    <!--<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">-->
+    <meta name="google-signin-client_id" content="231951430730-iivu05t2dmdp0ljbm4e5u4uc3dmr009p.apps.googleusercontent.com">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="public/css/style.css" />
@@ -15,6 +15,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="public/js/renderer.js"></script>
+    <script src="public/js/login.js"></script>
 
     <script type="text/javascript">
         jQuery(document).ready(function($) {
@@ -59,11 +60,9 @@
 
 <body>
     <div class="contents">
-        <div class="login">
-            <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4"><img id="login-btn" src="src/login-btn.png" />
-            </a>
+        <div class="g-signin2" data-onsuccess="onSignIn">
+          <a href="#" onclick="onSignIn();">Sign in</a>
         </div>
-
         <div>
             <button class="brew-btn" onclick="brewCommand('list')">brew list</button>
         </div>
