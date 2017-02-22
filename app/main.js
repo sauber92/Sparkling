@@ -5,23 +5,10 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
-var oauthData;
 const {appNet} = require('electron')
 
 app.on('ready', () => {
     const {net} = require('electron')
-    const request = net.request('https://github.com/login/oauth/authorize?scope=user:email&client_id=7d7882ef5faa8cea3fc4')
-    request.on('response', (response) => {
-        console.log(`response': ${response.statusCode}`)
-
-        response.on('data', (chunk) => {
-            oauthData = chunk;
-        })
-        response.on('end', () => {
-          console.log('No more data in response.')
-        })
-    })
-    request.end()
 })
 
 let mainWindow;
@@ -55,3 +42,4 @@ app.on('activate', function () {
     createWindow()
   }
 });
+

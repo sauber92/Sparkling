@@ -17,6 +17,9 @@
     "electron": "^1.4.1"
   },
   "dependencies": {
-    "electron-json-storage": "^3.0.0"
+    "electron-google-oauth": "^2.0.0",
+    "electron-json-storage": "^3.0.0",
+    "electron-oauth2": "^2.4.1",
+    "firebase": "^3.6.10"
   }
 }
